@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body,
+html {
+  background: url('GIF/hero.gif') no-repeat 50% 50%;
+  background-size: cover;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.header-container {
+  width: 100%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  display: flex;
+}
+
+.header {
+  font-size: 54px;
+  font-weight: 600;
+}
+
+.nav-container {
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1 100%;
+  color: #fff;
+}
+
+.nav-container > * {
+  flex: 1 100%;
+}
+
+.inside {
+  width: 700px;
+  height: 350px;
+  border-radius: 70px;
+  background-color: rgba(79, 157, 103, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.inside:hover {
+  transform: scale(0.94);
+  transition: all 0.3s ease-out;
+}
+
+.inside:hover :is(#circle, #square, #triangle) {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+.inside .title {
+  left: 0;
+  margin: 30px;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.inside .title h2 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.inside .first-icon {
+  position: absolute;
+  right: 0;
+  margin: 30px;
+  top: 0;
+  font-size: 32px;
+}
+
+.inside .first-color ion-icon {
+  color: #fff;
+}
+
+.inside .text-wrapper {
+  font-size: 74px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+  top: 50%;
+  position: absolute;
+  left: -20%;
+  text-transform: capitalize;
+  font-weight: 400;
+  transform: translate(0, -50%);
+  white-space: nowrap;
+  animation-delay: 2s;
+  transition: 0.2s ease-out;
+  padding: 20px 0;
+  opacity: 1;
+  animation: float-text 30s linear infinite;
+}
+
+@keyframes float-text {
+  0% {
+    left: 5%;
+  }
+
+  50% {
+    left: -220%;
+  }
+
+  100% {
+    left: 5%;
+  }
+}
+
+.inside:hover .text-wrapper {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.inside .services {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 30px;
+}
+
+.inside .services p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.inside .second-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+
+.inside .second-icon ion-icon {
+  font-size: 18px;
+}
+
+.inside #square {
+  background-color: skyblue;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  z-index: -1;
+  transition: all 0.5s ease-out;
+  opacity: 0.45;
+  animation: round-round 10s linear infinite;
+}
+
+.inside #triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid #a5a1ff;
+  top: 55%;
+  right: 30%;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+  opacity: 0.45;
+  animation: round-round 8s linear infinite;
+}
+
+.inside #circle {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  border-radius: 50%;
+  width: 80px;
+  z-index: -1;
+  height: 80px;
+  background-color: indianred;
+  opacity: 0.45;
+  animation: round-round 8s linear infinite;
+  transition: all 0.3s ease-out;
+}
+
+@keyframes round-round {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.inside-work {
+  position: relative;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  margin-left: 10px;
+  width: 340px;
+  height: 180px;
+  border-radius: 70px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.inside-work:hover {
+  scale: 0.95;
+  transition: scale 0.3s ease-out;
+}
+
+.inside-work .title {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  margin: 30px;
+}
+
+.inside-work .title h2 {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.inside-work .icon {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  margin: 30px;
+  display: flex;
+}
+
+.inside-work .icon ion-icon {
+  color: #000;
+  font-size: 18px;
+}
+
+.inside-work .text-wrapper {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  opacity: 0;
+  color: #000;
+  white-space: nowrap;
+  font-size: 34px;
+  text-transform: capitalize;
+  overflow: hidden;
+  transform: translate(0, -50%);
+  animation: round-round-round 60s linear infinite;
+}
+
+.inside-work:hover .text-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+@keyframes round-round-round {
+  0% {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(-60%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.inside-work:hover :is(.title, .icon) {
+  display: none;
+  transition: all 0.4s ease-out;
+}
+
+.inside-about {
+  background-color: rgba(20, 20, 20, 0.6);
+  width: 340px;
+  height: 180px;
+  position: relative;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 70px;
+  margin-left: 10px;
+}
+
+.inside-about .title {
+  position: absolute;
+  margin: 30px;
+  bottom: 0;
+  left: 0;
+}
+
+.inside-about .title h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.inside-about .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+
+.inside-about .icon ion-icon {
+  font-size: 22px;
+  color: #fff;
+}
+
+.inside-about .text-wrapper {
+  font-size: 34px;
+  position: absolute;
+  text-transform: capitalize;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  animation: round-round-round 40s linear infinite;
+  top: 35%;
+}
+
+.inside-about:hover .text-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.inside-about:hover :is(.title, .icon) {
+  display: none;
+  transition: 1s ease-out;
+}
+
+.inside-about:hover {
+  scale: 0.95;
+  transition: scale 0.3s ease-out;
+}
+
+.inside-contact {
+  position: absolute;
+  bottom: 20px;
+  height: 170px;
+  width: 900px;
+  cursor: pointer;
+  background-color: rgba(255, 254, 162, 0.5);
+  overflow: hidden;
+  right: 0;
+  border-radius: 70px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.inside-contact .title {
+  position: absolute;
+  margin: 30px;
+  bottom: 0;
+  left: 0;
+}
+
+.inside-contact .title h2 {
+  color: #222;
+  font-weight: 400;
+}
+
+.inside-contact .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+
+.inside-contact .icon ion-icon {
+  font-size: 22px;
+  color: #222;
+}
+
+.inside-contact .text-wrapper {
+  font-size: 34px;
+  position: absolute;
+  top: 35%;
+  animation: round-round-round 30s linear infinite;
+  white-space: nowrap;
+  color: #222;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.inside-contact:hover .text-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.inside-contact:hover :is(.title, .icon) {
+  display: none;
+  transition: all 0.5s ease-out;
+}
+
+.inside-contact:hover {
+  scale: 0.95;
+  transition: scale 0.3s ease-in-out;
+}
