@@ -36,16 +36,15 @@ html {
   display: flex;
   flex-direction: row;
   flex: 1 100%;
+  padding: .5em;
   color: #fff;
 }
 
-.nav-container > * {
+.nav-container>* {
   flex: 1 100%;
 }
 
 .inside {
-  width: 700px;
-  height: 350px;
   border-radius: 70px;
   background-color: rgba(79, 157, 103, 0.5);
   cursor: pointer;
@@ -358,8 +357,8 @@ html {
 .inside-contact {
   position: absolute;
   bottom: 20px;
-  height: 170px;
-  width: 900px;
+  height: 300px;
+  width: 1130px;
   cursor: pointer;
   background-color: rgba(255, 254, 162, 0.5);
   overflow: hidden;
